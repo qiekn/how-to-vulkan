@@ -7,6 +7,8 @@ include(FetchContent)
 set(NAME HowToVulkan)
 project(${NAME})
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 if (NOT IS_DIRECTORY $ENV{VULKAN_SDK})
     message(WARNING "Vulkan SDK not detected, if installed please set VULKAN_SDK env var or manually provide libraries")
 else()
