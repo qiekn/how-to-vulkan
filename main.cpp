@@ -685,3 +685,5 @@ int main(int argc, char* argv[])
 	vkDestroyDevice(device, nullptr);
 	vkDestroyInstance(instance, nullptr);
 }
+
+// vim: nolist ts=2
