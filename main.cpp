@@ -118,7 +118,7 @@ int main(int argc, char* argv[])
 	chk(SDL_Vulkan_LoadLibrary(NULL));
 	volkInitialize();
 	// Instance
-	VkApplicationInfo appInfo{ .sType = VK_STRUCTURE_TYPE_APPLICATION_INFO, .pApplicationName = "How to Vulkan", .apiVersion = VK_API_VERSION_1_3 };
+	VkApplicationInfo appInfo{ .sType = VK_STRUCTURE_TYPE_APPLICATION_INFO, .pApplicationName = "ck: How to Vulkan", .apiVersion = VK_API_VERSION_1_3 };
 	uint32_t instanceExtensionsCount{ 0 };
 	char const* const* instanceExtensions{ SDL_Vulkan_GetInstanceExtensions(&instanceExtensionsCount) };
 	VkInstanceCreateInfo instanceCI{
@@ -178,7 +178,7 @@ int main(int argc, char* argv[])
 	VmaAllocatorCreateInfo allocatorCI{ .flags = VMA_ALLOCATOR_CREATE_BUFFER_DEVICE_ADDRESS_BIT, .physicalDevice = devices[deviceIndex], .device = device, .pVulkanFunctions = &vkFunctions, .instance = instance };
 	chk(vmaCreateAllocator(&allocatorCI, &allocator));
 	// Window and surface
-	SDL_Window* window = SDL_CreateWindow("How to Vulkan", 1280u, 720u, SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE);
+	SDL_Window* window = SDL_CreateWindow("ck: How to Vulkan", 1280u, 720u, SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE);
 	assert(window);
 	chk(SDL_Vulkan_CreateSurface(window, instance, nullptr, &surface));
 	chk(SDL_GetWindowSize(window, &windowSize.x, &windowSize.y));
